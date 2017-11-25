@@ -1,7 +1,7 @@
 # ----------------------- #
 #      Main Configs       #
 # ----------------------- #
-
+baseurl: /cws-website
 url: http://cws.javadog.io
 title: Cryptographic Web Store
 email: developers@javadog.io
