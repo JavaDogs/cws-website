@@ -1,0 +1,8 @@
+---
+layout: default
+img: stable.png
+category: Features
+title: Solid Java - Minimal Dependencies
+description: |
+---
+  Technically, CWS is written in Java 8 / Java EE 7. It only relies on the SLF4J logging framework and nothing else. This way, it will deploy in any Java EE 7+ compliant Containers or Java EE7+ Compliant Cloud and work. The database layer is written using JPA, so the underlying database can be changed to whichever is desired. The initially supported databases include H2, HyperSQL & PostgreSQL. Support for other databases can be made easily.

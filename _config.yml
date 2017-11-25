@@ -1,0 +1,30 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://cws.javadog.io
+title: Cryptographic Web Store
+email: developers@javadog.io
+author: Kim N. Jensen
+description: > # "Write an awesome description for your new site here. 
+  CWS saves your data encrypted, so only those who should have access to it, can access it.
+copyright: 'Copyright &copy; 2017 Kim N. Jensen. All Rights Reserved.'
+credits: 'Credits: Kim Jensen'
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  - title: twitter
+    url: https://twitter.com/JavaDogIO
+  - title: github
+    url: https://github.com/javadogs/cws

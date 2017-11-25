@@ -1,0 +1,8 @@
+---
+layout: default
+img: communication.png
+category: Features
+title: Communication
+description: |
+---
+Communication is achieved via a public API, which allows both REST (scheduled for version 0.8) and SOAP based WebService requests. This will give a high degree of flexibility for anyone to integrate it into their system.

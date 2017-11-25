@@ -1,0 +1,56 @@
+    <!-- About Section -->
+    <section id="docs" class="">
+    <div class="content-section-a">
+      <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+              <br/><br/>
+              <h2>Documentation</h2>
+              <br/>
+              <h3>Who is this for</h3>
+              <p>Although security is the key part of using CWS - it is not possible to achieve a level of security which will be demanded from many corporations, organizations or governments. To obtain such a degree of security, the best advice is to not use hosting or cloud services. As they will inherently be your achilles heel.</p>
+
+              <p>CWS is aiming at improving security for others, who neither can nor will pay for additional security by either hosting data themselves or use other means of improved tools. The goal is not to achieve perfect security but to make life harder for hackers to read out data.</p>
+
+              <p>If this is what is your goal, then CWS may be a tool which use can find useful in your chain.</p>
+
+
+            
+              <h3>Disclaimer</h3>
+
+              <p>As stated above, CWS neither can nor will aim at perfect security. That said, the work with developing CWS has been with the primary focus on improving backend security, by ensuring that what is stored is all encrypted.</p>
+
+              <p>Generally, there are 3 areas where security will come up short:</p>
+              <ul>
+                <li>Hosting or Cloud Provider<br>
+                If the hosting provider is not taking their customers data security seriously, either by not patching their software or protecting their services using firewalls. Then, CWS cannot give you a guarentee that your data is secure. As CWS requires that the underlying software to run Java & Java EE must be properly updated.</li>
+                <li>Network Communication<br>
+                CWS uses WebServices (REST / SOAP) for all requests. this means that the communication must be properly secured with SSL. If not, then all data send or received may be compromised, as it can be sniffed over the net. As SSL is added to the containers, it is not part of CWS, and as with patches & firewalls, CWS relies on a proper setup.</li>
+                <li>Data Processing<br>
+                During the processing of data, both the data and the keys will appear in readable form in the memory of the host. It is possible for someone with access to the hosts to make memory dumps, and this way obtain the information.</li>
+              </ul>
+              <p>Of these shortcomings, the last sounds like the worst, but as CWS is suppose to be added between your Persistence Logic & Database, the data is already present in other components and reading it out from those may be simpler. Put in short, the aim is not to focus on security of the processing, but storing - hence the name Crypto Store.</p>
+              <br/>
+
+
+
+              <h3>Release Plan</h3>
+
+              <ul>
+                <li>0.6 - Released November 17, 2017.<br>
+                  First public beta, it is feature complete and the data model is final. The API may still alter slight to increase consistency.</li>
+                <li>0.7 - Scheduled for December, 2017.<br>
+              Documentation Release, this includes documentation of the finalized API, and documentation for installing and running CWS under various Java EE 7 compliant Application Servers as well as Cloud Hosts.</li>
+                <li>0.8 - Scheduled for December, 2017.<br>
+                  REST Support, support for REST has been pending the completion of the API.</li>
+                <li>0.9 - Scheduled for December, 2017.<br>
+                  External review. Code Quality.</li>
+                <li>1.0 - Scheduled for December 31, 2017<br>
+                  First public release</li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+    </section>

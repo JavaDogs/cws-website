@@ -1,0 +1,8 @@
+---
+layout: default
+img: backend.png
+category: Features
+title: Lightweight Backend
+description: |
+---
+  CWS, Cryptographic Web Store or Crypto Store - is designed to be used as a backend component in other systems, added between existing persistence layer and the database. It uses a combination of standard cryptographic operations to ensure that the stored data is saved enrypted in a way, so only those who should have access to it, can access it.

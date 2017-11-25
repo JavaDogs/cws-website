@@ -1,0 +1,8 @@
+---
+layout: default
+img: circle.png
+category: Features
+title: Circles of Trust
+description: |
+---
+The CWS focuses on Circles of Trust, where Members of a Circle will have varying level of access to the Data belonging to the Circle. This is achieved by a combination of Symmetric and Asymmetric Encryption, guaranteeing that only Members with Access can view Data. Private & Symmetric Keys are stored encrypted, as is the Data Objects given. It should be noted, that the Data Objects stored can be anything, CWS is expectiny an array of bytes as source and will return an array of bytes, what those bytes actually contain is irrelevant for CWS - but CWS does support storing the encrypted data with a type, which can be used by the systems using it, to ensure that all Data Objects can be correctly read out.
