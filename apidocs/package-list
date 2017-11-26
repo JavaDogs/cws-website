@@ -1,0 +1,5 @@
+io.javadog.cws.api
+io.javadog.cws.api.common
+io.javadog.cws.api.dtos
+io.javadog.cws.api.requests
+io.javadog.cws.api.responses
