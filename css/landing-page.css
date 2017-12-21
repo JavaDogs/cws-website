@@ -40,21 +40,36 @@ h6 {
     background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
 }
-
+.align-right { text-align:right !important; }
 .intro-message {
+    text-align: left;
     position: relative;
     padding-top: 20%;
     padding-bottom: 20%;
 }
+.intro-message .byline {  margin-top:1em; }
 
 .intro-message > h1 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
 }
+.intro-message > h2 {
+    margin: 0;
+    font-style: italic;
+    padding-top: 1em;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 2.5em;
+}
+.intro-message > h3 {
+    margin: 0;
+    padding-top: 1em;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
 
 .intro-divider {
-    width: 400px;
+    text-align:left;
+    width: 450px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
