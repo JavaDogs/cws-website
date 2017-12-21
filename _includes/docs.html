@@ -21,35 +21,55 @@
             
               <h3>Disclaimer</h3>
 
-              <p>As stated above, CWS neither can nor will aim at perfect security. That said, the work with developing CWS has been with the primary focus on improving backend security, by ensuring that what is stored is all encrypted.</p>
 
-              <p>Generally, there are 3 areas where security will come up short:</p>
-              <ul>
-                <li><strong>Hosting or Cloud Provider</strong><br>
-                If the hosting provider is not taking their customers data security seriously, either by not patching their software or protecting their services using firewalls. Then, CWS cannot give you a guarentee that your data is secure. As CWS requires that the underlying software to run Java & Java EE must be properly updated.</li>
-                <li><strong>Network Communication</strong><br>
-                CWS uses WebServices (REST / SOAP) for all requests. this means that the communication must be properly secured with SSL. If not, then all data send or received may be compromised, as it can be sniffed over the net. As SSL is added to the containers, it is not part of CWS, and as with patches & firewalls, CWS relies on a proper setup.</li>
-                <li><strong>Data Processing</strong><br>
-                During the processing of data, both the data and the keys will appear in readable form in the memory of the host. It is possible for someone with access to the hosts to make memory dumps, and this way obtain the information.</li>
-              </ul>
-              <p>Of these shortcomings, the last sounds like the worst, but as CWS is suppose to be added between your Persistence Logic & Database, the data is already present in other components and reading it out from those may be simpler. Put in short, the aim is not to focus on security of the processing, but storing - hence the name Crypto Store.</p>
-              <br/>
 
+                <p>As stated above, CWS neither can nor will aim at perfect security. That said, the work with developing CWS has been with the primary focus on improving backend security, by ensuring that what is stored is all encrypted.</p>
+
+                <p>Generally, there are 3 areas where the security will come up short:</p>
+                <ul>
+                  <li><b>Hosting or Cloud Provider</b><br />
+                  <i>If the hosting provider is not taking their customers data security seriously, either by not patching their software or protecting their services using firewalls. Then, CWS cannot give you a guarentee that your data is secure. As CWS requires that the underlying software to run Java &amp; Java EE must be properly updated.</i></li>
+                  <li><b>Network Communication</b><br />
+                  <i>CWS uses WebServices (REST / SOAP) for all requests. this means that
+                  the communication must be properly secured with SSL. If not, then all
+                  data send or received may be compromised, as it can be sniffed over the
+                  net. As SSL is added to the containers, it is not part of CWS, and as
+                  with patches &amp; firewalls, CWS relies on a proper setup.</i></li>
+                  <li><b>Data Processing</b><br />
+                  <i>During the processing of data, both the data and the keys will appear
+                  in readable form in the memory of the host. It is possible for someone
+                  with access to the hosts to make memory dumps, and this way obtain the
+                  information.</i></li>
+                </ul>
+
+                <p>Of these shortcomings, the last sounds like the worst, but as CWS is
+                suppose to be added between your Persistence Logic &amp; Database, the
+                data is already present in other components and reading it out from those
+                may be simpler. Put in short, the focus has been on improving the security
+                of storing the data, not processing - hence the name <i>Crypto Store</i>.</p>
 
 
               <h3>Release Plan</h3>
 
               <ul>
-                <li>0.6 - Released November 17, 2017.<br>
-                  First public beta, it is feature complete and the data model is final. The API may still alter slight to increase consistency.</li>
-                <li>0.7 - Scheduled for December, 2017.<br>
-              Documentation Release, this includes documentation of the finalized API, and documentation for installing and running CWS under various Java EE 7 compliant Application Servers as well as Cloud Hosts.</li>
-                <li>0.8 - Scheduled for December, 2017.<br>
-                  REST Support, support for REST has been pending the completion of the API.</li>
-                <li>0.9 - Scheduled for December, 2017.<br>
-                  External review. Code Quality.</li>
-                <li>1.0 - Scheduled for December 31, 2017<br>
-                  First public release</li>
+                <li>
+                  <b>0.8</b> - <i>Scheduled for December, 2017.</i><br />
+                  <i>REST Support, support for REST has been pending the completion of
+                  the API.</i>
+                </li>
+                <li>
+                  <b>0.9</b> - <i>Scheduled for January, 2018.</i><br />
+                  <i>External Code &amp; Documentation review.</i>
+                </li>
+                <li>
+                  <b>1.0</b> - <i>Scheduled for January 31, 2018</i><br />
+                  <i>First public release - was scheduled for release end of December, 2017,
+                  but as Java will <a href="https://bugs.openjdk.java.net/browse/JDK-8170157">include
+                  unlimited strength encryption in the patch release in January,</a> it was
+                  decided to push the release of CWS 1 month to update the default encryption
+                  strength, so only if an earlier version of Java 8 is used, will it be
+                  required to downgrade the strength.</i>
+                </li>
               </ul>
             </div>
           </div>
