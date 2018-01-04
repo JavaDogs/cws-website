@@ -1,78 +1,107 @@
-    <!-- About Section -->
-    <section id="docs" class="">
+<!-- About Section -->
+<section id="docs" class="">
     <div class="content-section-a">
-      <div class="container">
+        <div class="container">
 
-        <div class="row">
-            <div class="col-lg-12">
-              <br/><br/>
-              <h2>Documentation</h2>
-              <br>
-              <p class=""><a target="_blank" href="{{site.baseurl}}apidocs/index.html" class="btn btn-default btn-lg"><i class="fa fa-code fa-fw"></i> API docs</a></p>
-              <br/>
-              <h3>Who is this for</h3>
-              <p>Although security is the key part of using CWS - it is not possible to achieve a level of security which will be demanded from many corporations, organizations or governments. To obtain such a degree of security, the best advice is to not use hosting or cloud services. As they will inherently be your achilles heel.</p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Documentation</h2>
 
-              <p>CWS is aiming at improving security for others, who neither can nor will pay for additional security by either hosting data themselves or use other means of improved tools. The goal is not to achieve perfect security but to make life harder for hackers to read out data.</p>
+                    <p class=""><a target="_blank" href="{{site.baseurl}}apidocs/index.html" class="btn btn-default btn-lg">API docs</a></p>
 
-              <p>If this is what is your goal, then CWS may be a tool which use can find useful in your chain.</p>
+                    <h3>Who is this for</h3>
 
+                    <p>CWS was created initially, as a way to add an extra
+                    security layer into existing web-based applications. It uses
+                    JCE, Java Cryptography Extension, for all cryptographic
+                    operations, meaning that it will work independently of what
+                    is offered by Hosting or Cloud Providers.</p>
 
-            
-              <h3>Disclaimer</h3>
+                    <p>If you are using a Hosting or Cloud Provider for your
+                    Web-based Application, CWS may improve your security. Even
+                    if you aren't using a Hosting or Cloud Provider, CWS may
+                    still improve the data stored, by adding an additional
+                    encryption layer. This way, if your server is compromised
+                    your data may still be secure.</p>
 
+                    <h3>Disclaimer</h3>
 
+                    <p>The old paper <a href="https://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf">Reflections
+                    on trusting trust</a> shows that perfect security is an
+                    illusion. For any system running, there is simply too many
+                    aspects to consider. From flaws in servers, missing security
+                    patches, undisclosed bugs - or flaws and bugs in your own
+                    Application.</p>
 
-                <p>As stated above, CWS neither can nor will aim at perfect security. That said, the work with developing CWS has been with the primary focus on improving backend security, by ensuring that what is stored is all encrypted.</p>
+                    <p>Generally, there are 3 areas where the security will come
+                    up short:</p>
 
-                <p>Generally, there are 3 areas where the security will come up short:</p>
-                <ul>
-                  <li><b>Hosting or Cloud Provider</b><br />
-                  <i>If the hosting provider is not taking their customers data security seriously, either by not patching their software or protecting their services using firewalls. Then, CWS cannot give you a guarentee that your data is secure. As CWS requires that the underlying software to run Java &amp; Java EE must be properly updated.</i></li>
-                  <li><b>Network Communication</b><br />
-                  <i>CWS uses WebServices (REST / SOAP) for all requests. this means that
-                  the communication must be properly secured with SSL. If not, then all
-                  data send or received may be compromised, as it can be sniffed over the
-                  net. As SSL is added to the containers, it is not part of CWS, and as
-                  with patches &amp; firewalls, CWS relies on a proper setup.</i></li>
-                  <li><b>Data Processing</b><br />
-                  <i>During the processing of data, both the data and the keys will appear
-                  in readable form in the memory of the host. It is possible for someone
-                  with access to the hosts to make memory dumps, and this way obtain the
-                  information.</i></li>
-                </ul>
+                    <ul>
+                        <li><b>Hosting or Cloud Provider</b><br/>
+                        <i>If the Provider is not taking their customers data
+                        security seriously, either by not patching their
+                        software or protecting their services using firewalls.
+                        Then, CWS cannot give you a guarentee that your data is
+                        secure. As CWS requires that the underlying software to
+                        run Java &amp; Java EE must be properly updated.</i>
+                        </li>
+                        <li><b>Network Communication</b><br/>
+                        <i>Today, SSL should be standard for <b>all</b>
+                        Web-based communication, regardless if it is dynamic or
+                        static web-sited or it is internal communication between
+                        service layers. If just one part of the entire system
+                        has been compromised, all parts may be compromised by
+                        insecure communications. SSL should therefore be applied
+                        in all layers, and the setup should be made as secure as
+                        possible by limitting or removing protocols and increase
+                        key strength. See <a href="https://www.ssllabs.com/ssltest/">SSL Labs</a>
+                        for testing and hints - to start, you can use <a href="https://letsencrypt.org/">Let's Encrypt</a>
+                        to get free SSL Certificates.</i>
+                        </li>
+                        <li><b>Data Processing</b><br/>
+                        <i>When handling a request, CWS requires that the Data
+                        and Keys are available in the memory and CPU of the
+                        server - although the time of most requests can be
+                        measured in milliseconds, it may be possible for someone
+                        skilled enough to extract the information using memory
+                        dumps.</i>
+                        </li>
+                    </ul>
 
-                <p>Of these shortcomings, the last sounds like the worst, but as CWS is
-                suppose to be added between your Persistence Logic &amp; Database, the
-                data is already present in other components and reading it out from those
-                may be simpler. Put in short, the focus has been on improving the security
-                of storing the data, not processing - hence the name <i>Crypto Store</i>.</p>
+                    <p>Of the above mentioned shortcomings, the first two will
+                    be the easiest to compromise, and also the easiest to add
+                    processes to prevent. Meaning, that the last one may both
+                    sound and appear as the worst. However, if this is something
+                    that is of concern, you may reconsider using a Provider for
+                    your Application, as nothing will be able to give you the
+                    level of trust you requires except hosting the servers
+                    yourself. And even if you host the servers yourself, CWS may
+                    still give you an additional security layer as your stored
+                    data is encrypted so even if someone compromises your
+                    system, the data and keys should still be secure, as it is
+                    stored encrypted - hence the name <i>Crypto Store</i>.</p>
 
+                    <h3>Release Plan</h3>
 
-              <h3>Release Plan</h3>
-
-              <ul>
-                <li>
-                  <b>0.8</b> - <i>Scheduled for December, 2017.</i><br />
-                  <i>REST Support, support for REST has been pending the completion of
-                  the API.</i>
-                </li>
-                <li>
-                  <b>0.9</b> - <i>Scheduled for January, 2018.</i><br />
-                  <i>External Code &amp; Documentation review.</i>
-                </li>
-                <li>
-                  <b>1.0</b> - <i>Scheduled for January 31, 2018</i><br />
-                  <i>First public release - was scheduled for release end of December, 2017,
-                  but as Java will <a href="https://bugs.openjdk.java.net/browse/JDK-8170157">include
-                  unlimited strength encryption in the patch release in January,</a> it was
-                  decided to push the release of CWS 1 month to update the default encryption
-                  strength, so only if an earlier version of Java 8 is used, will it be
-                  required to downgrade the strength.</i>
-                </li>
-              </ul>
+                    <ul>
+                        <li>
+                            <b>0.9</b> - <i>Scheduled for January,
+                            2018.</i><br/>
+                            <i>External Code &amp; Documentation review.</i>
+                        </li>
+                        <li>
+                            <b>1.0</b> - <i>Scheduled for January 31,
+                            2018</i><br/>
+                            <i>First public release - was scheduled for release
+                            end of December, 2017, but as Java will include
+                            <a href="https://bugs.openjdk.java.net/browse/JDK-8170157">unlimited strength</a>
+                            encryption in the patch release in January, it was
+                            decided to push the release of CWS 1 month to update
+                            the default encryption strength.</i>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          </div>
         </div>
-    </section>
+    </div>
+</section>
