@@ -9,6 +9,6 @@ description: |
 
 <b>Use Case 2:</b> <i>Travelling to an insecure region, wishing to access data but fear loosing device and thus control.</i>
 
-Introducing "Circles of Trust". A simply concept, whereby a number of parties can work together securely. A Trustee is an Account, granted access to a Circle. An account can be a member, company, organization or simply a device. Each is having their own access credentials, which is used to unlock a Circle Key, adding or removing someone Trustees is simple and will not affect the Circle Data. A series of Asymmetric and Symmetric cryptographic operations will guarantee this.
+Introducing "<b><i>Circles of Trust</i></b>". A simply concept, whereby a number of parties can work together securely. A Trustee is an Account, granted access to a Circle. An account can be a member, company, organization or simply a device. Each is having their own access credentials, which is used to unlock a Circle Key, adding or removing Trustees is simple and will not affect the Circle Data. A series of Asymmetric and Symmetric cryptographic operations will guarantee this, and thus the data safety.
 
 Oh, and if your device is stolen, either remove the account, or log in with the credentials and invalidate it. An invalid account is still working, is still a Trustee - but cannot access any data.
