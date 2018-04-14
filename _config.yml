@@ -1,8 +1,8 @@
 # ----------------------- #
 #      Main Configs       #
 # ----------------------- #
-baseurl: /cws-website/
-url: http://cws.javadog.io
+baseurl: /
+url: https://javadog.io
 title: CWS - PGP for Clouds
 email: developers@javadog.io
 author: Kim N. Jensen
