@@ -5,7 +5,7 @@ category: Features
 title: Security Features
 description: |
 ---
-As CWS is written purely in Java 8 / Java EE 7. It is thus only relying on the
+CWS is written purely in Java 8 / Java EE 7. It is thus only relying on the
 very solid Java Server components, which is frequently seeing security updates.
 By not relying on anything else, the security problems have been minimized.
 
