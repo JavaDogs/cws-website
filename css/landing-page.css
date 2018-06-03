@@ -1,3 +1,4 @@
+
 /*!
  * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -39,16 +40,34 @@ h6 {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
-    color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
-    background-size: cover;
+    color: #333;
+    min-height: 500px;
 }
+.intro-header .img {
+    margin-bottom: 0px;
+    opacity: 0.1;
+    color: #fff;
+    background: #000 url(../img/cloud.png) top center no-repeat;
+    width: 100%;
+    min-height: 500px;
+    background-size: cover;
+    overflow: hidden;
+    position:absolute;
+    top:0px;
+    left:0;
+    z-index:1;
+}
+.intro-header .container {
+    position: relative;
+    z-index: 2;
+}
+
 .align-right { text-align:right !important; }
 .intro-message {
-    text-align: left;
+    text-align: center;
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 5em;
+    padding-bottom: 2em;
 }
 .intro-message .byline {  margin-top:1em; }
 
