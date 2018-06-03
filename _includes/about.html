@@ -3,13 +3,34 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
               <br/><br/>
+
+
               <h2>About CWS</h2>
+
               <br/>
                 <p>CWS - Cryptographic Web Store - gives you an <strong>easy</strong> way to store <strong>any data safely encrypted</strong>.</p>
                 <p>Data is <strong>never persisted unencrypted</strong> and only <strong>minimal necessary metadata</strong> is stored. </p>
                 <p>Support for <strong>circles of trust</strong> allows to share encrypted data amongst a group of people.</p>
                 <p>KeyManagement is important, and all keys are controlled by the members directly.</p>
                 <p>We have close to <strong>100% test coverage</strong>.</p>
+              <br/>
+
+                <ul class="list-inline intro-social-buttons">
+                    {% for social in site.social %}
+                    <li>
+                        <a href="{{ social.url }}"
+                           class="btn btn-default btn-lg"><i
+                                class="fa fa-{{ social.title }} fa-fw"></i>
+                            <span class="network-name">{{ social.title }}</span></a>
+                    </li>
+                    {% endfor %}
+                    <li>
+                        <a href="#download"
+                           class="btn btn-default btn-lg"><i
+                                class="fa fa-download fa-fw"></i>
+                            Download</a>
+                    </li>
+                </ul>
 
                 <h2><a href="https://circleci.com/gh/JavaDogs/cws" rel="nofollow"><img src="https://api.travis-ci.org/JavaDogs/cws.svg" alt="CircleCI" style="max-width:100%;"></a>
                     <a href="https://scan.coverity.com/projects/javadogs-cws" rel="nofollow"><img src="https://scan.coverity.com/projects/13955/badge.svg" alt="Coverity" style="max-width:100%;"></a>
