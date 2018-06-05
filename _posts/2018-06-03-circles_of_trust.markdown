@@ -2,7 +2,7 @@
 layout: default
 img: circle.png
 category: Features
-title: Cirles of Trust
+title: Circles of Trust
 description: |
 ---
 CWS is based on a the following use cases:
