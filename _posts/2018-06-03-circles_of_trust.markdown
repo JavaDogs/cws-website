@@ -9,7 +9,7 @@ CWS is based on a the following use cases:
 
 <b>Use Case 1:</b> <i>Two or more parties wishes to securely share data.</i>
 
-<b>Use Case 2:</b> <i>A Webshop needs a secure way to store customer data, so
+<b>Use Case 2:</b> <i>A Web shop needs a secure way to store customer data, so
 only the relevant parties can access it.</i>
 
 Introducing &quot;<b><i>Circles of Trust</i></b>&quot;, a simple concept, build

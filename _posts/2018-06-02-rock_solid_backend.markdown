@@ -2,7 +2,7 @@
 layout: default
 img: anvil.png
 category: Features
-title: Rocksolid Backend Service
+title: Rock Solid Backend Service
 description: |
 ---
 CWS, is designed as a standalone component, which runs in any Java EE 7+ based
